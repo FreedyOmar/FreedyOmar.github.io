@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulario simple</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="cur">
+  <form class="card" id="formulario">
+    <h1>Ingresa tus datos</h1>
+
+    <div class="field">
+      <label for="palabraClave">Palabra clave</label>
+      <input id="palabraClave" name="palabraClave" type="text" placeholder="Escribe tu palabra clave" required />
+    </div>
+
+    <div class="field">
+      <label for="numeroFavorito">Número favorito</label>
+      <input id="numeroFavorito" name="numeroFavorito" type="number" inputmode="numeric" placeholder="Ej. 7" required />
+    </div>
+
+    <div class="field">
+      <label for="colorFavorito">Color favorito</label>
+      <input id="colorFavorito" name="colorFavorito" type="text" placeholder="Ej. azul" required />
+    </div>
+
+    <div class="field">
+      <label for="musicaFavorita">Música favorita</label>
+      <input id="musicaFavorita" name="musicaFavorita" type="text" placeholder="Ej. rock" required />
+    </div>
+
+    <button class="primary" type="submit">Crear contraseña</button>
+    <button class="primary" type="button" id="btnAleatorio">Generar aleatoriamente</button>
+    
+    <p id="claveGenerada" style="margin-top:12px; font-weight:bold;"></p>
+  </form>
+
+  <script src="pestaña.js"></script>
+</body>
+</html>
