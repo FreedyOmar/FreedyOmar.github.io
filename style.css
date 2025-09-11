@@ -1,37 +1,4 @@
-/* Fondo con imagen y estilo al texto */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-image: url("imagenes/bloqueo.gif"); /* Cambia 'fondo.jpg' por tu imagen */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.contenedor {
-    background-color: rgba(0, 0, 0, 0.6); 
-    padding: 40px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.contenedor h1 {
-    color: white;
-    font-size: 2em;
-}
-#cur{
-
- background-image: url("imagenes/bloqueo.gif");
-background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat
-}
-/* Fuentes y base */
+/* ================== ESTILOS GENERALES ================== */
 :root {
   font-family: 'Poppins', system-ui, Arial, sans-serif;
   --color-principal: #3b82f6;
@@ -42,116 +9,84 @@ background-size: cover;
 }
 
 body {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  background: var(--color-fondo);
   margin: 0;
-}
+  padding: 0;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
 
-/* Tarjeta del formulario */
-.card {
-  background: #fff;
-  padding: 32px 24px;
-  border-radius: 16px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-  width: min(420px, 90vw);
-  transition: transform 0.2s ease;
-}
+  /* Fondo con imagen */
+  background-image: url("imagenes/bloqueo.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-.card:hover {
-  transform: translateY(-4px);
-}
-
-h1 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  color: #111827;
 }
 
-/* Campos */
-.field {
-  display: grid;
-  gap: 8px;
-  margin: 12px 0;
+/* ================== CONTENEDOR PRINCIPAL ================== */
+.contenedor {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px 20px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  box-sizing: border-box;
 }
 
-label {
-  font-weight: 600;
-  color: #374151;
+.contenedor h1 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
-input {
-  padding: 12px 14px;
-  border: 1px solid var(--color-input-border);
-  border-radius: var(--radio-borde);
-  font-size: 1rem;
-  background: var(--color-input);
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-input:focus {
-  outline: none;
-  border-color: var(--color-principal);
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
-}
-
-/* Botones */
-button {
+/* ================== BOTÓN INICIAR ================== */
+#btnIniciar {
   margin-top: 16px;
-  padding: 12px 16px;
+  padding: 16px 28px;
+  font-size: 1.2rem;
   border: none;
-  border-radius: var(--radio-borde);
+  border-radius: 12px;
   font-weight: 600;
   cursor: pointer;
+  background-color: var(--color-principal);
+  color: #fff;
+  min-width: 220px;
   transition: background 0.2s, transform 0.2s;
 }
 
-button.primary {
-  background: var(--color-principal);
-  color: #fff;
-}
-
-button.primary:hover {
-  background: #2563eb;
+#btnIniciar:hover {
+  background-color: #2563eb;
   transform: translateY(-2px);
 }
 
-/* Mensaje de contraseña generada */
-#claveGenerada {
-  margin-top: 16px;
-  font-weight: 600;
-  color: #1f2937;
-  text-align: center;
-  word-break: break-all;
-}
-#btnIniciar {
-    margin-top: 16px;
-    padding: 18px 28px;       /* más grande para móviles */
-    font-size: 1.3rem;        /* fuente más grande */
-    border: none;
-    border-radius: 12px;
-    font-weight: 600;
-    cursor: pointer;
-    background-color: var(--color-principal);
-    color: #fff;
-    min-width: 220px;         /* ancho mínimo */
-    transition: background 0.2s, transform 0.2s;
+/* ================== RESPONSIVE ================== */
+@media (max-width: 768px) {
+  .contenedor {
+    padding: 20px 15px;
+  }
+
+  .contenedor h1 {
+    font-size: 1.5rem;
+  }
+
+  #btnIniciar {
+    width: 100%;
+    font-size: 1.3rem;
+    padding: 18px 0;
+  }
 }
 
-/* Efecto hover */
-#btnIniciar:hover {
-    background-color: #2563eb;
-    transform: translateY(-2px);
-}
-
-/* Ajuste para pantallas pequeñas */
 @media (max-width: 480px) {
-    #btnIniciar {
-        width: 90%;           /* ocupa la mayor parte del ancho */
-        padding: 20px 0;
-        font-size: 1.4rem;
-    }
-}
+  .contenedor h1 {
+    font-size: 1.2rem;
+  }
 
+  #btnIniciar {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 16px 0;
+  }
+}
