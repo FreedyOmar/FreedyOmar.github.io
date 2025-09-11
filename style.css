@@ -126,3 +126,32 @@ button.primary:hover {
   text-align: center;
   word-break: break-all;
 }
+#btnIniciar {
+    margin-top: 16px;
+    padding: 18px 28px;       /* más grande para móviles */
+    font-size: 1.3rem;        /* fuente más grande */
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: var(--color-principal);
+    color: #fff;
+    min-width: 220px;         /* ancho mínimo */
+    transition: background 0.2s, transform 0.2s;
+}
+
+/* Efecto hover */
+#btnIniciar:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 480px) {
+    #btnIniciar {
+        width: 90%;           /* ocupa la mayor parte del ancho */
+        padding: 20px 0;
+        font-size: 1.4rem;
+    }
+}
+
