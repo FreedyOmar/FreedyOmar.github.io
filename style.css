@@ -1,3 +1,4 @@
+/* ========= VARIABLES GLOBALES ========= */
 :root {
   font-family: 'Poppins', system-ui, Arial, sans-serif;
   --color-principal: #3b82f6;
@@ -17,15 +18,15 @@ body#cur {
   flex-direction: column; /* Para centrar elementos en columna */
   text-align: center;
 
-  background-image: url("https://d2w66jai70z7l8.cloudfront.net/media/2024/02/Unidad-Educativa-Juan-Bautista-Aguirre.webp");
-  background-size: cover;
+ background-image: url("/imagenes/logo.png");
+  background-size:contain ;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 /* ========= PANTALLA DE BIENVENIDA ========= */
 .contenedor {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #000000;
   padding: 30px 20px;
   border-radius: 12px;
   max-width: 600px;
