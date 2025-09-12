@@ -69,3 +69,12 @@ document.getElementById('formulario').addEventListener('submit', function(e){
 document.getElementById('btnAleatorio').addEventListener('click', function(){
     generarClaveAleatoria();
 });
+function mostrarClave(clave) {
+    Swal.fire({
+        title: '🔒 Contraseña generada',
+        html: `<strong>${clave}</strong>`,
+        icon: 'success',
+        confirmButtonText: 'Aceptar',
+        confirmButtonColor: '#3085d6'
+    });
+}
