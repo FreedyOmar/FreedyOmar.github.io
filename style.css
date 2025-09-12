@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-image: url("imagenes/bloqueo.gif"); /* Cambia 'fondo.jpg' por tu imagen */
+    background-image: url("https://d2w66jai70z7l8.cloudfront.net/media/2024/02/Unidad-Educativa-Juan-Bautista-Aguirre.webp"); /* Cambia 'fondo.jpg' por tu imagen */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -24,12 +24,12 @@ body {
     color: white;
     font-size: 2em;
 }
-#cur{
+/*#cur{
 
  background-image: url("https://d2w66jai70z7l8.cloudfront.net/media/2024/02/Unidad-Educativa-Juan-Bautista-Aguirre.webp");
 background-size: cover;
     background-position: center;
-    background-repeat: no-repeat
+    background-repeat: no-repeat*/
 }
 /* Fuentes y base */
 :root {
@@ -247,5 +247,6 @@ body {
     padding: 16px 0;
   }
 }
+
 
 
