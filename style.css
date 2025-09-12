@@ -1,55 +1,64 @@
-/* Fondo con imagen y estilo al texto */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-image: url("https://d2w66jai70z7l8.cloudfront.net/media/2024/02/Unidad-Educativa-Juan-Bautista-Aguirre.webp"); /* Cambia 'fondo.jpg' por tu imagen */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.contenedor {
-    background-color: rgba(0, 0, 0, 0.6); 
-    padding: 40px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.contenedor h1 {
-    color: white;
-    font-size: 2em;
-}
-/*#cur{
-
- background-image: url("https://d2w66jai70z7l8.cloudfront.net/media/2024/02/Unidad-Educativa-Juan-Bautista-Aguirre.webp");
-background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat*/
-}
-/* Fuentes y base */
 :root {
   font-family: 'Poppins', system-ui, Arial, sans-serif;
   --color-principal: #3b82f6;
-  --color-fondo: #f6f7fb;
   --color-input: #fff;
   --color-input-border: #dfe3ea;
   --radio-borde: 12px;
 }
 
-body {
+/* ========= FONDO GENERAL ========= */
+body#cur {
+  margin: 0;
+  padding: 0;
   min-height: 100vh;
-  display: grid;
-  place-items: center;
-  background: var(--color-fondo);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Para centrar elementos en columna */
+  text-align: center;
+
+  background-image: url("https://d2w66jai70z7l8.cloudfront.net/media/2024/02/Unidad-Educativa-Juan-Bautista-Aguirre.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ========= PANTALLA DE BIENVENIDA ========= */
+.contenedor {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px 20px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+}
+
+.contenedor h1 {
+  color: white;
+  font-size: 2rem;
   margin: 0;
 }
 
-/* Tarjeta del formulario */
+/* Botón iniciar */
+#btnIniciar {
+  margin-top: 20px;
+  padding: 16px 28px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: var(--radio-borde);
+  font-weight: 600;
+  cursor: pointer;
+  background-color: var(--color-principal);
+  color: #fff;
+  min-width: 220px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+#btnIniciar:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* ========= FORMULARIO ========= */
 .card {
   background: #fff;
   padding: 32px 24px;
@@ -63,7 +72,7 @@ body {
   transform: translateY(-4px);
 }
 
-h1 {
+.card h1 {
   font-size: 1.5rem;
   margin-bottom: 20px;
   text-align: center;
@@ -97,20 +106,17 @@ input:focus {
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
 }
 
-/* Botones */
-button {
+/* Botones del formulario */
+button.primary {
   margin-top: 16px;
   padding: 12px 16px;
   border: none;
   border-radius: var(--radio-borde);
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
-}
-
-button.primary {
   background: var(--color-principal);
   color: #fff;
+  transition: background 0.2s, transform 0.2s;
 }
 
 button.primary:hover {
@@ -118,7 +124,7 @@ button.primary:hover {
   transform: translateY(-2px);
 }
 
-/* Mensaje de contraseña generada */
+/* Contraseña generada */
 #claveGenerada {
   margin-top: 16px;
   font-weight: 600;
@@ -126,100 +132,8 @@ button.primary:hover {
   text-align: center;
   word-break: break-all;
 }
-/* Botón exclusivo para "Iniciar" */
-#btnIniciar {
-    margin-top: 16px;
-    padding: 18px 28px;       /* más grande para móviles */
-    font-size: 1.3rem;        /* fuente más grande */
-    border: none;
-    border-radius: 12px;
-    font-weight: 600;
-    cursor: pointer;
-    background-color: var(--color-principal);
-    color: #fff;
-    min-width: 220px;         /* ancho mínimo */
-    transition: background 0.2s, transform 0.2s;
-}
 
-/* Efecto hover */
-#btnIniciar:hover {
-    background-color: #2563eb;
-    transform: translateY(-2px);
-}
-
-/* Ajuste para pantallas pequeñas */
-@media (max-width: 480px) {
-    #btnIniciar {
-        width: 90%;           /* ocupa la mayor parte del ancho */
-        padding: 20px 0;
-        font-size: 1.4rem;
-    }
-}
-/*========= ESTILOS GENERALES ================== */
-:root {
-  font-family: 'Poppins', system-ui, Arial, sans-serif;
-  --color-principal: #3b82f6;
-  --color-fondo: #f6f7fb;
-  --color-input: #fff;
-  --color-input-border: #dfe3ea;
-  --radio-borde: 12px;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  min-height: 100vh;
-
-  /* Fondo con imagen */
-  background-image: url("imagenes/bloqueo.gif");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-/* ================== CONTENEDOR PRINCIPAL ================== */
-.contenedor {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 30px 20px;
-  border-radius: 12px;
-  max-width: 600px;
-  width: 90%;
-  box-sizing: border-box;
-}
-
-.contenedor h1 {
-  color: white;
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-/* ================== BOTÓN INICIAR ================== */
-#btnIniciar {
-  margin-top: 16px;
-  padding: 16px 28px;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 12px;
-  font-weight: 600;
-  cursor: pointer;
-  background-color: var(--color-principal);
-  color: #fff;
-  min-width: 220px;
-  transition: background 0.2s, transform 0.2s;
-}
-
-#btnIniciar:hover {
-  background-color: #2563eb;
-  transform: translateY(-2px);
-}
-
-/* ================== RESPONSIVE ================== */
+/* ========= RESPONSIVE ========= */
 @media (max-width: 768px) {
   .contenedor {
     padding: 20px 15px;
@@ -242,11 +156,7 @@ body {
   }
 
   #btnIniciar {
-    width: 100%;
     font-size: 1.1rem;
     padding: 16px 0;
   }
 }
-
-
-
